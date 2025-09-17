@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <title>My Dashboard</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="dashboard-header">
+        <!--header container-->
+
+        <div class="header-info">
+          <!--header top row-->
+
+          <button type="button" id="open-sidebar">&#9776;</button>
+
+          <label for="search" class="header-search">
+            &#128269;
+            <input placeholder="Search..." id="search" type="search" />
+          </label>
+
+          <div class="header-profile">
+            <!-- header top row right side-->
+            <span class="material-symbols-outlined">
+              notification_important
+            </span>
+            <p>Feedo D.</p>
+            <div class="info-avatar">
+              <img src="imgs/Avatar Image.jpeg" alt="profile picture" />
+            </div>
+          </div>
+          <!--  end of header top row right side-->
+        </div>
+        <!-- end of header top row-->
+
+        <div class="header-action">
+          <div class="action-profile-info">
+            <div class="profile-action-pic">
+              <img src="imgs/Avatar Image.jpeg" alt="profile picture" />
+            </div>
+            <div class="profile-action-welcome">
+              <p>Hi There,</p>
+              <p>Feedo D. (@feedo)</p>
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button type="button" class="btn btn-new">New</button>
+            <button type="button" class="btn btn-upload">Upload</button>
+            <button type="button" class="btn btn-share">Share</button>
+          </div>
+        </div>
+        <!--Header bottom row-->
+      </header>
+      <!-- end of header -->
+
+      <!-- sidebar -->
+      <aside class="sidebar">
+        <h3 class="sidebar-title">
+          <span class="material-symbols-outlined"> dashboard </span>Dashboard
+        </h3>
+        <nav class="sidebar-nav-list">
+          <div class="sidebar-links">
+            <ul class="sidebar-main-nav">
+              <li>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >home</span
+                >Home
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> person </span>Profile
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> mail </span>Messages
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> history </span>History
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> task_alt </span>Tasks
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> nature_people </span
+                >Community
+              </li>
+            </ul>
+          </div>
+
+          <div class="sidebar-settings">
+            <ul class="sidebar-settings-list">
+              <li>
+                <span class="material-symbols-outlined"> settings </span
+                >Settings
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> support_agent </span
+                >Support
+              </li>
+              <li>
+                <span class="material-symbols-outlined"> privacy </span>Privacy
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- main tasks -->
+      <main class="main-content">
+        <div class="main-tasks">
+          <div class="task task1">
+            <h3 class="task-title">Task title</h3>
+            <p class="task-desc">
+              This is a small description about the thing that we are working on
+            </p>
+            <p class="task-date">
+              Due Date: <span class="compele-date">10/1/2025</span>
+            </p>
+            <span class="task-label">in-progress</span>
+          </div>
+          <div class="task task2">
+            <h3 class="task-title">Task title</h3>
+            <p class="task-desc">
+              This is a small description about the thing that we are working on
+            </p>
+            <p class="task-date">
+              Due Date: <span class="compele-date">10/1/2025</span>
+            </p>
+            <span class="task-label">in-progress</span>
+          </div>
+          <div class="task task3">Task3</div>
+          <div class="task task4">Task4</div>
+          <div class="task task5">Task5</div>
+          <div class="task task6">Task6</div>
+          <div class="task task4">Task7</div>
+          <div class="task task5">Task8</div>
+          <div class="task task6">Task9</div>
+        </div>
+        <!-- events -->
+        <div class="events">
+          <div class="events-heading">
+            <h3 class="events-title">Upcoming Events</h3>
+            <label for="pick-date">Select a Date</label>
+            <input id="pick-date" type="date" />
+          </div>
+          <div class="event-card">
+            <h4 class="event-card-title">Event Title</h4>
+            <p class="event-card-desc">Going to visit my frien</p>
+            <p class="event-card-date">Date: 10/31/2026</p>
+          </div>
+
+          <div class="event-card">
+            <h4 class="event-card-title">Event Title</h4>
+            <p class="event-card-desc">Going to visit my frien</p>
+            <p class="event-card-date">Date: 10/31/2026</p>
+          </div>
+
+          <div class="event-card">
+            <h4 class="event-card-title">Event Title</h4>
+            <p class="event-card-desc">Going to visit my frien</p>
+            <p class="event-card-date">Date: 10/31/2026</p>
+          </div>
+
+          <div class="event-card">
+            <h4 class="event-card-title">Event Title</h4>
+            <p class="event-card-desc">Going to visit my frien</p>
+            <p class="event-card-date">Date: 10/31/2026</p>
+          </div>
+        </div>
+      </main>
+
+      <!-- footer -->
+      <footer class="dashboard-footer">
+        <p>Tasks app</p>
+        <p>By: Feedo</p>
+      </footer>
+    </div>
+  </body>
+</html>
