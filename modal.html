@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal</title>
+    <link rel="stylesheet" href="modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+  </head>
+  <body>
+    <div class="dim-layer"></div>
+    <!-- Modal start -->
+    <div class="modal-wrapper">
+      <!-- modal header -->
+      <div class="modal-header">
+        <h2>Task Details</h2>
+        <p>
+          <span class="material-symbols-outlined"> close </span>
+        </p>
+      </div>
+      <!--modal header end-->
+
+      <!-- Activity Details -->
+      <div class="activity-detail">
+        <div class="task-details">
+          <p>Task Details</p>
+        </div>
+        <div class="comments">
+          <p>Comments</p>
+          <p>2</p>
+        </div>
+      </div>
+      <!--  Activity Details -->
+      <h3 class="form-details-heading">New Todo</h3>
+
+      <form action="submit" method="get">
+      <div class="status-options">
+        <button class="status-btn" type="button">
+          <span class="material-symbols-outlined priority-high">priority_high</span>
+High
+          Priority
+        </button>
+
+        <button class="status-btn" type="button">
+         <span class="material-symbols-outlined priority-medium">low_priority</span>Medium Priority
+        </button>
+
+        <button class="status-btn" type="button">
+          <span class="material-symbols-outlined priority-low">low_priority</span>Low Priority
+        </button>
+      </div>
+      <!-- end buttons -->
+
+      <!-- inputs start -->
+      <div class="form-inputs">
+        <div class="input-title">
+          <label for="task-name"
+            ><input type="text" placeholder="Task Title" id="task-name"
+          /></label>
+        </div>
+        <div class="input-desc">
+          <label for="task-desc">
+            <textarea
+              name="task-desc"
+              id="task-desc"
+              placeholder="Task Description"
+            ></textarea>
+          </label>
+        </div>
+        <!--Form section-->
+        
+        <div class="input-date">
+          <label for="task-date">
+            <input type="date" name="task-date" id="task-date" />
+          </label>
+        </div>
+        <div class="recurring-input">
+          <label class="switch" for="checkbox">
+            Recurring Activity
+            <input type="checkbox" id="checkbox" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="form-buttons">
+          <button type="reset" class="cancel-btn"><span class="material-symbols-outlined">close</span>Cancel</button>
+          <button type="submit" class="submit-btn"><span class="material-symbols-outlined">check_circle</span>Save Changes</button>
+        </div>
+      </div>
+    </div>
+    </form>
+    <!--modal end-->
+  </body>
+</html>

@@ -114,7 +114,8 @@
       <!-- main tasks -->
       <main class="main-content">
         <div class="main-tasks">
-          <div class="task task1">
+          <div class="task task1" id="taskIndex">
+            <p class="task-recurring">recurring</p>
             <h3 class="task-title">Task title</h3>
             <p class="task-desc">
               This is a small description about the thing that we are working on
@@ -124,23 +125,6 @@
             </p>
             <span class="task-label">in-progress</span>
           </div>
-          <div class="task task2">
-            <h3 class="task-title">Task title</h3>
-            <p class="task-desc">
-              This is a small description about the thing that we are working on
-            </p>
-            <p class="task-date">
-              Due Date: <span class="compele-date">10/1/2025</span>
-            </p>
-            <span class="task-label">in-progress</span>
-          </div>
-          <div class="task task3">Task3</div>
-          <div class="task task4">Task4</div>
-          <div class="task task5">Task5</div>
-          <div class="task task6">Task6</div>
-          <div class="task task4">Task7</div>
-          <div class="task task5">Task8</div>
-          <div class="task task6">Task9</div>
         </div>
         <!-- events -->
         <div class="events">
@@ -180,6 +164,89 @@
         <p>Tasks app</p>
         <p>By: Feedo</p>
       </footer>
+
+<!--! __________________________________ modal __________________________________ -->
+       <div class="dim-layer"></div>
+    <!-- Modal start -->
+    <div class="modal">
+      <!-- modal header -->
+      <div class="modal-header">
+        <h2>Task Details</h2>
+        <p class="modal-close-btn">
+          <span class="material-symbols-outlined"> close </span>
+        </p>
+      </div>
+      <!--modal header end-->
+
+      <!-- Activity Details -->
+      <div class="activity-detail">
+        <div class="task-details">
+          <p>Task Details</p>
+        </div>
+        <div class="comments">
+          <p>Comments</p>
+          <p>2</p>
+        </div>
+      </div>
+      <!--  Activity Details -->
+      <h3 class="form-details-heading">New Todo</h3>
+
+      <form action="submit" method="get">
+      <div class="status-options">
+        <button class="status-btn" type="button">
+          <span class="material-symbols-outlined priority-high">priority_high</span>
+High
+          Priority
+        </button>
+
+        <button class="status-btn" type="button">
+         <span class="material-symbols-outlined priority-medium">low_priority</span>Medium Priority
+        </button>
+
+        <button class="status-btn" type="button">
+          <span class="material-symbols-outlined priority-low">low_priority</span>Low Priority
+        </button>
+      </div>
+      <!-- end buttons -->
+
+      <!-- inputs start -->
+      <div class="form-inputs">
+        <div class="input-title">
+          <label for="task-name"
+            ><input type="text" placeholder="Task Title" id="task-name"
+          /></label>
+        </div>
+        <div class="input-desc">
+          <label for="task-desc">
+            <textarea
+              name="task-desc"
+              id="task-desc"
+              placeholder="Task Description"
+            ></textarea>
+          </label>
+        </div>
+        <!--Form section-->
+        
+        <div class="input-date">
+          <label for="task-date">
+            <input type="date" name="task-date" id="task-date" />
+          </label>
+        </div>
+        <div class="recurring-input">
+          <label class="switch" for="checkbox">
+            Recurring Activity
+            <input type="checkbox" id="checkbox" />
+            <span class="toggle-slider"></span>
+          </label>
+        </div>
+        <div class="form-buttons">
+          <button type="reset" class="cancel-btn"><span class="material-symbols-outlined">close</span>Cancel</button>
+          <button type="submit" class="submit-btn"><span class="material-symbols-outlined">check_circle</span>Save Changes</button>
+        </div>
+      </div>
+    </div>
+    </form>
+    <!--modal end-->
     </div>
   </body>
 </html>
