@@ -38,17 +38,17 @@
 
       <form action="submit" method="get">
       <div class="status-options">
-        <button class="status-btn" type="button">
+        <button class="status-btn" type="button" value="high">
           <span class="material-symbols-outlined priority-high">priority_high</span>
 High
           Priority
         </button>
 
-        <button class="status-btn" type="button">
+        <button class="status-btn" type="button" value="medium">
          <span class="material-symbols-outlined priority-medium">low_priority</span>Medium Priority
         </button>
 
-        <button class="status-btn" type="button">
+        <button class="status-btn" type="button" value="low">
           <span class="material-symbols-outlined priority-low">low_priority</span>Low Priority
         </button>
       </div>
@@ -73,9 +73,14 @@ High
         <!--Form section-->
         
         <div class="input-date">
-          <label for="task-date">
-            <input type="date" name="task-date" id="task-date" />
-          </label>
+          <label for="task-date">Due Date</label>
+          <input
+            type="date"
+            name="task-date"
+            id="task-date"
+            title="Select due date"
+            placeholder="YYYY-MM-DD"
+          />
         </div>
         <div class="recurring-input">
           <label class="switch" for="checkbox">

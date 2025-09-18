@@ -65,7 +65,7 @@ table {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   font-size: 24px;
   line-height: 1;
-  text-transform: none; /* in case a parent uppercases text */
+  text-transform: none; /* in case a parent uppercase text */
 }
 
 /* UI Tokens */
@@ -261,7 +261,7 @@ body {
 /* main section */
 .main-content {
   display: grid;
-  grid-template-columns: 1fr minmax(200px, 240px);
+  grid-template-columns: 1fr minmax(280px, 300px);
   grid-template-areas: "cards events";
   box-shadow: var(--shadow-sm);
 }
@@ -296,6 +296,7 @@ body {
   padding: 5px 15px;
   border-radius: 25px;
   color: var(--color-text);
+  pointer-events: none;
 }
 
 .task-title {
@@ -329,8 +330,11 @@ body {
   display: -webkit-box; /* required */
   -webkit-box-orient: vertical; /* required */
   -webkit-line-clamp: 3; /* lines */
+  line-clamp: 3; /* standard property for compatibility */
   overflow: hidden;
   font-size: var(--font-size-sm);
+  pointer-events: none;
+  margin: 10px 0px;
 }
 
 .task-label {
@@ -339,8 +343,14 @@ body {
   align-self: flex-start;
   padding: var(--space-sm) var(--space-lg);
   opacity: 0.8;
-  border-radius: 10px;
+  border-radius: 5px;
   color: var(--color-text);
+  pointer-events: none;
+  margin-top: 10px;
+}
+
+.task-date {
+  pointer-events: none;
 }
 
 /* events aside */
@@ -428,7 +438,7 @@ footer {
   font-weight: 800;
 }
 
-/* psuedo classes */
+/* pseudo classes */
 /* --- Pseudo classes for interactivity --- */
 
 /* Buttons */
@@ -517,7 +527,11 @@ a:active {
   display: none;
   opacity: 0;
   transition: opacity 0.25s ease;
-  pointer-events: auto;
+  pointer-events: none;
+}
+
+.modal {
+  display: none;
 }
 
 .modal-wrapper {
@@ -541,6 +555,7 @@ a:active {
 
 .modal-wrapper.close {
   animation: slideOut 1s ease forwards;
+  display: none;
 }
 
 .dim-open {
@@ -639,12 +654,6 @@ a:active {
 
 /* form inputs */
 
-.form-inputs {
-  /* border: 2px solid red; */
-  /* display: flex;
-  flex-direction: column; */
-}
-
 .form-inputs div {
   padding: 10px 20px;
 }
@@ -659,6 +668,7 @@ textarea {
   border-radius: 10px;
   resize: none;
   width: 50%;
+  padding: 10px;
 }
 
 #task-date {
@@ -692,6 +702,10 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+
+button span {
+  pointer-events: none;
 }
 
 /* slider toggle */
@@ -906,3 +920,7 @@ textarea {
   background-color: #1d4ed8; /* darker blue when on */
 }
 /* ! end pseudo classes */
+.status-btn-active {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
